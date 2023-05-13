@@ -16,7 +16,7 @@ Okta will be configured as an identity provider in your AWS account in addition 
 data "aws_caller_identity" "current" {}
 
 module "okta-sso" {
-  source = "./terraform-aws-okta-sso"
+  source = "mscribellito/okta-sso/aws"
 
   aws_account_id = data.aws_caller_identity.current.account_id
 }
